@@ -1813,120 +1813,83 @@
       </section>
 
       <section class="reservation" id="reservation">
-        <div class="container">
 
-          <div class="form reservation-form bg-black-10">
-            <form action="" class="form-left">
-              <h2 class="headline-1 text-center">Online Reservation</h2>
+ <div class="container">
+  <div class="reservation-form bg-black-10" style="display: flex; padding: 20px; box-sizing: border-box;">
 
-              <p class="form-text text-center">
-                Booking request <a href="tel:+88123123456" class="link">+88-123-123456</a>
-                or fill out the order form
-              </p>
+    <!-- LEFT: Map -->
+    <div style="width: 75%; height: 650px;">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1630.944458591971!2d33.37524410985599!3d35.159391005351004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14de17cd5a665c11%3A0x8768dc14ecc55743!2zzpzPgM-Bzq_Ous65IM6azrHPhs61zr3Otc6vzr_OvS4gTVBSSUtJIGNhZmUgYmFyLiBOaWNvc2lhIEN5cHJ1cy4gQlJJS0ku!5e0!3m2!1sen!2s!4v1761854677960!5m2!1sen!2s"
+        style="width: 100%; height: 100%; border: 0; display: block; filter: invert(100%) hue-rotate(180deg);"
+        allowfullscreen="" loading="lazy">
+      </iframe>
+    </div>
 
-              <div class="input-wrapper">
-                <input type="text" name="name" placeholder="Your Name" autocomplete="off" class="input-field">
-                <input type="tel" name="phone" placeholder="Phone Number" autocomplete="off" class="input-field">
-              </div>
+ <!-- RIGHT: Contact Info -->
+<div style="
+  width: 25%;
+  height: 650px;
+  background-image: url('./assets/images/form-pattern.png');
+  background-size: cover;
+  background-position: center;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  text-align: center;
+">
+  <div style="max-width: 100%; display: flex; flex-direction: column; align-items: center;">
 
-              <div class="input-wrapper">
+    <img src="./assets/images/logo.png" width="160" height="50" loading="lazy" alt="Logo" style="margin-bottom: 20px;">
 
-                <div class="icon-wrapper">
-                  <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+    <p class="contact-label">Contact Us</p>
+    <a href="tel:+35799907651" class="body-1 contact-number hover-underline">+357 99 907651</a>
 
-                  <select name="person" class="input-field">
-                    <option value="1-person">1 Person</option>
-                    <option value="2-person">2 Person</option>
-                    <option value="3-person">3 Person</option>
-                    <option value="4-person">4 Person</option>
-                    <option value="5-person">5 Person</option>
-                    <option value="6-person">6 Person</option>
-                    <option value="7-person">7 Person</option>
-                  </select>
+    <div class="separator" style="margin: 10px 0;"></div>
 
-                  <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
-                </div>
+    <p class="contact-label">Location</p>
+    <address class="body-4" style="margin-bottom: 10px;">
+      Kallipoleos 67Β,<br />
+      Nicosia 1071 🇨🇾
+    </address>
+    <div class="separator" style="margin: 10px 0;"></div>
+    <p class="contact-label">Working Hours</p>
+    <p class="body-4" style="margin-bottom: 10px;">
+      Monday to Sunday <br />
+      17.00 – Late
+    </p>
 
-                <div class="icon-wrapper">
-                  <ion-icon name="calendar-clear-outline" aria-hidden="true"></ion-icon>
+    <p class="body-4" style="font-style: italic; margin-bottom: 20px;">
+      No reservations required.
+    </p>
 
-                  <input type="date" name="reservation-date" class="input-field">
+    <div class="wrapper" style="margin-bottom: 20px;">
+      <div class="separator" style="margin: 5px 0;"></div>
+      <div class="separator" style="margin: 5px 0;"></div>
+      <div class="separator" style="margin: 5px 0;"></div>
+    </div>
 
-                  <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
-                </div>
+    <div class="social-links" style="display: flex; gap: 20px;">
+      <a href="https://www.instagram.com/mpriki_kafeneion" target="_blank" class="social-link" style="text-align: center;">
+        <ion-icon name="logo-instagram" style="font-size: 36px; color: var(--gold-crayola);"></ion-icon>
+        <span>Instagram</span>
+      </a>
+      <a href="https://www.facebook.com/rockandbluesboozeandcoffee" target="_blank" class="social-link" style="text-align: center;">
+        <ion-icon name="logo-facebook" style="font-size: 36px; color: var(--gold-crayola);"></ion-icon>
+        <span>Facebook</span>
+      </a>
+    </div>
 
-                <div class="icon-wrapper">
-                  <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+  </div>
+</div>
 
-                  <select name="time" class="input-field">
-                    <option value="08:00am">08 : 00 am</option>
-                    <option value="09:00am">09 : 00 am</option>
-                    <option value="10:00am">10 : 00 am</option>
-                    <option value="11:00am">11 : 00 am</option>
-                    <option value="12:00pm">12 : 00 pm</option>
-                    <option value="01:00pm">01 : 00 pm</option>
-                    <option value="02:00pm">02 : 00 pm</option>
-                    <option value="03:00pm">03 : 00 pm</option>
-                    <option value="04:00pm">04 : 00 pm</option>
-                    <option value="05:00pm">05 : 00 pm</option>
-                    <option value="06:00pm">06 : 00 pm</option>
-                    <option value="07:00pm">07 : 00 pm</option>
-                    <option value="08:00pm">08 : 00 pm</option>
-                    <option value="09:00pm">09 : 00 pm</option>
-                    <option value="10:00pm">10 : 00 pm</option>
-                  </select>
 
-                  <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
-                </div>
 
-              </div>
-
-              <textarea name="message" placeholder="Message" autocomplete="off" class="input-field"></textarea>
-
-              <button type="submit" class="btn btn-secondary">
-                <span class="text text-1">Book A Table</span>
-                <span class="text text-2" aria-hidden="true">Book A Table</span>
-              </button>
-
-            </form>
-
-            <div class="form-right text-center" style="background-image: url('./assets/images/form-pattern.png')">
-
-              <h2 class="headline-1 text-center">Contact Us</h2>
-
-              <p class="contact-label">Booking Request</p>
-
-              <a href="tel:+88123123456" class="body-1 contact-number hover-underline">+88-123-123456</a>
-
-              <div class="separator"></div>
-
-              <p class="contact-label">Location</p>
-
-              <address class="body-4">
-                Restaurant St, Delicious City, <br />
-                London 9578, UK
-              </address>
-
-              <p class="contact-label">Lunch Time</p>
-
-              <p class="body-4">
-                Monday to Sunday <br />
-                11.00 am - 2.30pm
-              </p>
-
-              <p class="contact-label">Dinner Time</p>
-
-              <p class="body-4">
-                Monday to Sunday <br />
-                05.00 pm - 10.00pm
-              </p>
-
-            </div>
-
-          </div>
-
-        </div>
       </section>
+
+		<!--
 
       <section class="section features text-center" aria-label="features">
         <div class="container">
@@ -1979,24 +1942,22 @@
           <img src="./assets/images/shape-8.png" width="120" height="115" loading="lazy" alt="shape" class="shape shape-2">
         </div>
       </section>
-
+-->
       <section class="section event bg-black-10" aria-label="event">
         <div class="container">
           <p class="section-subtitle label-2 text-center">Recent Updates</p>
-          <h2 class="section-title headline-1 text-center">Upcoming Event</h2>
+          <h2 class="section-title headline-1 text-center">Our Events</h2>
 
           <ul class="grid-list">
             <li>
               <div class="event-card has-before hover:shine">
                 <div class="card-banner img-holder" style="--width: 350; --height: 450;">
                   <img src="./assets/images/event-1.jpg" width="350" height="450" loading="lazy"
-                    alt="Flavour so good you’ll try to eat with your eyes." class="img-cover">
-                  <time class="publish-date label-2" datetime="2022-09-15">15/09/2022</time>
+                    alt="Greek Mixtape" class="img-cover">
+                  <time class="publish-date label-2" datetime="Sundays">Every Sunday</time>
                 </div>
                 <div class="card-content">
-                  <p class="card-subtitle label-2 text-center">Food, Flavour</p>
-                  <h3 class="card-title title-2 text-center">
-                    Flavour so good you’ll try to eat with your eyes.
+                  <p class="card-subtitle label-2 text-center">Greek Rock Sundays</p>
                   </h3>
                 </div>
               </div>
@@ -2006,13 +1967,11 @@
               <div class="event-card has-before hover:shine">
                 <div class="card-banner img-holder" style="--width: 350; --height: 450;">
                   <img src="./assets/images/event-2.jpg" width="350" height="450" loading="lazy"
-                    alt="Flavour so good you’ll try to eat with your eyes." class="img-cover">
-                  <time class="publish-date label-2" datetime="2022-09-08">08/09/2022</time>
+                    alt="FUZZ Fridays" class="img-cover">
+                  <time class="publish-date label-2" datetime="Fridays">Every Friday</time>
                 </div>
                 <div class="card-content">
-                  <p class="card-subtitle label-2 text-center">Healthy Food</p>
-                  <h3 class="card-title title-2 text-center">
-                    Flavour so good you’ll try to eat with your eyes.
+                  <p class="card-subtitle label-2 text-center">Fuzz Fridays</p>
                   </h3>
                 </div>
               </div>
@@ -2023,12 +1982,10 @@
                 <div class="card-banner img-holder" style="--width: 350; --height: 450;">
                   <img src="./assets/images/event-3.jpg" width="350" height="450" loading="lazy"
                     alt="Flavour so good you’ll try to eat with your eyes." class="img-cover">
-                  <time class="publish-date label-2" datetime="2022-09-03">03/09/2022</time>
+                  <time class="publish-date label-2" datetime="Merch">Our Merch</time>
                 </div>
                 <div class="card-content">
-                  <p class="card-subtitle label-2 text-center">Recipie</p>
-                  <h3 class="card-title title-2 text-center">
-                    Flavour so good you’ll try to eat with your eyes.
+                  <p class="card-subtitle label-2 text-center">Oi pellofanelles mas</p>
                   </h3>
                 </div>
               </div>
@@ -2036,39 +1993,57 @@
 
           </ul>
 
-          <a href="#" class="btn btn-primary">
-            <span class="text text-1">View Our Blog</span>
-            <span class="text text-2" aria-hidden="true">View Our Blog</span>
-          </a>
+<div class="social-button-group">
+  <a href="https://www.facebook.com/rockandbluesboozeandcoffee" target="_blank" class="btn btn-primary social-btn">
+    <ion-icon name="logo-facebook"></ion-icon>
+    <span class="text">Facebook</span>
+  </a>
+
+  <a href="https://www.instagram.com/mpriki_kafeneion" target="_blank" class="btn btn-primary social-btn">
+    <ion-icon name="logo-instagram"></ion-icon>
+    <span class="text">Instagram</span>
+  </a>
+</div>
 
         </div>
       </section>
+	  
+	  
+	 			<div class="testes">
+<iframe style= "filter: invert(100%) hue-rotate(180deg)" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1630.944458591971!2d33.37524410985599!3d35.159391005351004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14de17cd5a665c11%3A0x8768dc14ecc55743!2zzpzPgM-Bzq_Ous65IM6azrHPhs61zr3Otc6vzr_OvS4gTVBSSUtJIGNhZmUgYmFyLiBOaWNvc2lhIEN5cHJ1cy4gQlJJS0ku!5e0!3m2!1sen!2s!4v1761854677960!5m2!1sen!2s" width="100%" height="500" style="border:1" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
     </article>
   </main>
 
   <footer class="footer section has-bg-image text-center"
     style="background-image: url('./assets/images/footer-bg.jpg')">
+
+
+			
     <div class="container">
-
       <div class="footer-top grid-list">
+	          <ul class="footer-list">
 
+
+        </ul>
+  
         <div class="footer-brand has-before has-after">
 
           <a href="#" class="logo">
-            <img src="./assets/images/logo.svg" width="160" height="50" loading="lazy" alt="grilli home">
+            <img src="./assets/images/logo.png" width="160" height="50" loading="lazy">
           </a>
 
           <address class="body-4">
-            Kallipoleos 67Β, Nicosia 1071 🇨🇾
+            Kallipoleos 67Β, Nicosia 1071, 🇨🇾
           </address>
+</p>
+          <a href="mailto:mpriki.kafeneion@gmail.com" class="body-4 contact-link">mpriki.kafeneion@gmail.com</a>
 
-          <a href="mailto:booking@grilli.com" class="body-4 contact-link">booking@grilli.com</a>
-
-          <a href="tel:+88123123456" class="body-4 contact-link">Booking Request : +88-123-123456</a>
-
+          <a href="tel:+35799907651" class="body-4 contact-link">Tel : +357 99 907651</a>
+</p>
           <p class="body-4">
-            Open : 17:00 - 02:00
+            
+			Mon-Sun: 17:00 - 02:00
           </p>
 
           <div class="wrapper">
@@ -2076,52 +2051,32 @@
             <div class="separator"></div>
             <div class="separator"></div>
           </div>
+       
+<div class="social-links">
+  <a href="https://www.instagram.com/mpriki_kafeneion" target="_blank" rel="noopener noreferrer"
+     class="social-link" title="Instagram">
+    <div class="icon">
+      <ion-icon name="logo-instagram" aria-hidden="true"></ion-icon>
+    </div>
+    <span>Instagram</span>
+  </a>
 
-          <p class="title-1">Get News & Offers</p>
+  <a href="https://www.facebook.com/rockandbluesboozeandcoffee" target="_blank" rel="noopener noreferrer"
+     class="social-link" title="Facebook">
+    <div class="icon">
+      <ion-icon name="logo-facebook" aria-hidden="true"></ion-icon>
+    </div>
+    <span>Facebook</span>
+  </a>
+</div>
 
-          <p class="label-1">
-            Subscribe us & Get <span class="span">25% Off.</span>
-          </p>
+</address>
 
-          <form action="" class="input-wrapper">
-            <div class="icon-wrapper">
-              <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
-
-              <input type="email" name="email_address" placeholder="Your email" autocomplete="off" class="input-field">
-            </div>
-
-            <button type="submit" class="btn btn-secondary">
-              <span class="text text-1">Subscribe</span>
-              <span class="text text-2" aria-hidden="true">Subscribe</span>
-            </button>
-          </form>
-
+	   </a>
+	   
         </div>
-
-        <ul class="footer-list">
-
-          <li>
-            <a href="#" class="label-2 footer-link hover-underline">Home</a>
-          </li>
-
-          <li>
-            <a href="#" class="label-2 footer-link hover-underline">Menus</a>
-          </li>
-
-          <li>
-            <a href="#" class="label-2 footer-link hover-underline">About Us</a>
-          </li>
-
-          <li>
-            <a href="#" class="label-2 footer-link hover-underline">Our Chefs</a>
-          </li>
-
-          <li>
-            <a href="#" class="label-2 footer-link hover-underline">Contact</a>
-          </li>
-
-        </ul>
-
+	
+		<!--
         <ul class="footer-list">
 
           <li>
@@ -2145,7 +2100,10 @@
           </li>
 
         </ul>
-
+		
+-->
+		
+		
       </div>
 
       <div class="footer-bottom">
@@ -2158,6 +2116,9 @@
       </div>
 
     </div>
+	
+		
+
   </footer>
 
   <a href="#top" class="back-top-btn active" aria-label="back to top" data-back-top-btn>
