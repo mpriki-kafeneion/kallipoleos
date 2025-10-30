@@ -2089,7 +2089,11 @@ textarea.input-field {
   }
 }
 
-
+@media (max-width: 768px) {
+  .reservation-form {
+    display: none !important;
+  }
+}
 
 /**
  * responsive for larger than 1400px screen
