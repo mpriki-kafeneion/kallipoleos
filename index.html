@@ -28,6 +28,25 @@
   <link rel="preload" as="image" href="./assets/images/hero-slider-2.jpg" />
   <link rel="preload" as="image" href="./assets/images/hero-slider-3.jpg" />
 </head>
+  <style>
+    /* Fix for menu item alignment and truncation on larger screens */
+    @media (min-width: 575px) {
+      /* Targets the element containing the title */
+      .menu-card .title-3 {
+          /* Gives the title more space (e.g., 75% of the wrapper width) */
+          max-width: 75%; 
+          /* Ensures the text does not wrap and gets truncated if still too long */
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+      }
+      .menu-card .span {
+          /* Prevents the price/separator from shrinking */
+          flex-shrink: 0;
+      }
+    }
+  </style>
+  </head>
 
 <body id="top">
 
