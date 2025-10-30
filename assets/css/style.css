@@ -2070,18 +2070,36 @@ textarea.input-field {
   .features .grid-list { grid-template-columns: repeat(4, 1fr); }
 
 }
-.social-links .icon ion-icon {
+.social-links {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.social-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.social-link ion-icon {
   font-size: 36px;
   color: var(--gold-crayola);
+  margin-bottom: 5px;
+}
+
+.social-link span {
+  font-size: 16px;
 }
 
 /* Mobile fix */
 @media (max-width: 768px) {
-  .social-links .icon ion-icon {
+  .social-link ion-icon {
     font-size: 48px;
   }
 
-  .social-links span {
+  .social-link span {
     font-size: 16px;
   }
 
