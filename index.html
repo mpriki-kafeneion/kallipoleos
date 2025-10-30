@@ -456,6 +456,36 @@
 
 <!-- MENU -->
 <section class="section menu" aria-label="menu-label" id="menu">
+
+  <!-- Scoped fix: uniform thumbnails, name+price on one line, consistent separators -->
+  <style>
+    /* layout: image | content */
+    #menu .menu-card { display:flex; gap:12px; align-items:flex-start; }
+    #menu .menu-card figure { margin:0; }
+
+    /* uniform thumbnail box regardless of image intrinsic size */
+    #menu .card-banner.img-holder { width:100px; height:100px; flex:0 0 100px; overflow:hidden; }
+    #menu .card-banner.img-holder img { width:100%; height:100%; object-fit:cover; display:block; }
+
+    /* canonical title row */
+    #menu .title-wrapper { display:flex; align-items:center; justify-content:space-between; gap:12px; }
+    #menu .title-wrapper .title-3 { margin:0; flex:1 1 auto; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+    #menu .title-wrapper .title-2 { flex:0 0 auto; margin-left:12px; white-space:nowrap; }
+
+    /* description spacing (present or absent doesn’t affect alignment) */
+    #menu .card-text.label-1 { margin-top:6px; }
+
+    /* identical thin separator for each item */
+    #menu .grid-list > li { border-top:1px solid rgba(255,255,255,0.18); padding-top:12px; margin-top:12px; }
+    #menu .grid-list > li:first-child { border-top:none; padding-top:0; margin-top:0; }
+
+    /* small-screen tweak */
+    @media (max-width:600px) {
+      #menu .card-banner.img-holder { width:72px; height:72px; flex:0 0 72px; }
+      #menu .menu-card { gap:10px; }
+    }
+  </style>
+
   <div class="container">
 
     <p class="section-subtitle text-center label-2">Flavors For Royalty</p>
@@ -510,7 +540,6 @@
     <h3 class="headline-2">Beers</h3>
 
     <ul class="grid-list">
-      <!-- cycle menu-1..menu-6 for thumbnails -->
       <li>
         <div class="menu-card">
           <figure class="card-banner img-holder" style="--width:100; --height:100;">
@@ -1344,6 +1373,7 @@
 
   </div>
 </section>
+
 
       <!-- TESTIMONIALS -->
       <section class="section testi text-center has-bg-image" style="background-image: url('./assets/images/testimonial-bg.jpg')"
