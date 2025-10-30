@@ -846,7 +846,7 @@ body.nav-active { overflow: hidden; }
 
 .hero-btn img {
   margin-inline: auto;
-  margin-block-end: 6px;
+  margin-block-end: 16px;
 }
 
 .hero-btn .span {
