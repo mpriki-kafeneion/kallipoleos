@@ -1860,6 +1860,8 @@ textarea.input-field {
   .testi-text {
     max-width: 910px;
     margin-inline: auto;
+	 font-size: 24px;
+  line-height: 1.6;
   }
 
 
@@ -2108,6 +2110,7 @@ textarea.input-field {
     justify-content: center;
   }
 }
+
 
 
 @media (max-width: 768px) {
