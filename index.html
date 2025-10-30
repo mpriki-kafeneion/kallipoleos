@@ -201,6 +201,7 @@
 
     <a href="#" class="btn btn-secondary">
   <span class="text text-1" id="today-date"></span>
+        <span class="tooltip-text">Great time for a beer</span>
 </a>
 
 <script>
@@ -208,9 +209,6 @@
     new Intl.DateTimeFormat('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })
     .format(new Date());
 </script>
-
-<a href="#" class="btn btn-secondary"> <span class="text text-1">Great day for a Beer!</span>
-</a>
       
       <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
         <span class="line line-1"></span>
