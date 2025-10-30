@@ -837,7 +837,7 @@ body.nav-active { overflow: hidden; }
   bottom: 15px;
   right: 15px;
   z-index: 2;
-  background-color: var(--gold-crayola);
+  background-color: var(--smoky-black-1);
   width: 110px;
   height: 110px;
   padding: 12px;
