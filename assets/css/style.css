@@ -1084,7 +1084,7 @@ body.nav-active { overflow: hidden; }
 
 .menu-card .span {
   color: var(--gold-crayola);
-  margin-block: 10px;
+  margin-block: 0px;
 }
 
 .menu-card .card-text {
