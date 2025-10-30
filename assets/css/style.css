@@ -2070,6 +2070,26 @@ textarea.input-field {
   .features .grid-list { grid-template-columns: repeat(4, 1fr); }
 
 }
+.social-links .icon ion-icon {
+  font-size: 36px;
+  color: var(--gold-crayola);
+}
+
+/* Mobile fix */
+@media (max-width: 768px) {
+  .social-links .icon ion-icon {
+    font-size: 48px;
+  }
+
+  .social-links span {
+    font-size: 16px;
+  }
+
+  .social-links {
+    gap: 30px;
+    justify-content: center;
+  }
+}
 
 
 @media (max-width: 768px) {
