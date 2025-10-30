@@ -1442,7 +1442,7 @@ textarea.input-field {
  * responsive for larger than 575px screen
  */
 
-@media (min-width: 575px) {
+@media (min-width: 0px) {
 
   /**
    * CUSTOM PROPERTY
