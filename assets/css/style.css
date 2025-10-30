@@ -1084,7 +1084,7 @@ body.nav-active { overflow: hidden; }
 
 .menu-card .span {
   color: var(--gold-crayola);
-  margin-block: 0px;
+  margin-block: 10px;
 }
 
 .menu-card .card-text {
@@ -1572,7 +1572,7 @@ textarea.input-field {
   .menu-card .title-wrapper {
     display: flex;
     justify-content: flex-start;
-    align-items: center;
+    align-items: right;
     gap: 15px;
   }
 
