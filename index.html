@@ -19,34 +19,34 @@
     rel="stylesheet" />
 
   <link rel="stylesheet" href="./assets/css/style.css" />
-<head>
-  <!-- existing stylesheet -->
-  <link rel="stylesheet" href="./assets/css/style.css">
-</head>
 
   <link rel="preload" as="image" href="./assets/images/hero-slider-1.jpg" />
   <link rel="preload" as="image" href="./assets/images/hero-slider-2.jpg" />
   <link rel="preload" as="image" href="./assets/images/hero-slider-3.jpg" />
-</head>
+
   <style>
     /* Fix for menu item alignment and truncation on larger screens */
     @media (min-width: 575px) {
-      /* Targets the element containing the title */
-      .menu-card .title-3 {
-          /* Gives the title more space (e.g., 75% of the wrapper width) */
-          max-width: 75%; 
-          /* Ensures the text does not wrap and gets truncated if still too long */
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
+      .menu-card .title-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 15px;
       }
+
+      .menu-card .title-3 {
+        max-width: 75%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        flex-shrink: 1;
+      }
+
       .menu-card .span {
-          /* Prevents the price/separator from shrinking */
-          flex-shrink: 0;
+        flex-shrink: 0;
       }
     }
   </style>
-  </head>
+</head>
 
 <body id="top">
 
@@ -397,38 +397,6 @@
 
           <h2 class="headline-1 section-title text-center">Our Menu</h2>
 
-          <h3 class="headline-2 section-title text-center" style="margin-top: 40px;">Food</h3>
-          <ul class="grid-list">
-            <li>
-              <div class="menu-card hover:card">
-                <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-1.png" width="100" height="100" loading="lazy" alt="Platter" class="img-cover">
-                </figure>
-                <div>
-                  <div class="title-wrapper">
-                    <h3 class="title-3"><a href="#" class="card-title">Platter</a></h3>
-                    <span class="span title-2">€12.00</span>
-                  </div>
-                  <p class="card-text label-1">A selection of fine cheeses, cured meats, fruits, and crackers.</p>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="menu-card hover:card">
-                <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-2.png" width="100" height="100" loading="lazy" alt="Platter Small" class="img-cover">
-                </figure>
-                <div>
-                  <div class="title-wrapper">
-                    <h3 class="title-3"><a href="#" class="card-title">Platter Small</a></h3>
-                    <span class="span title-2">€7.00</span>
-                  </div>
-                  <p class="card-text label-1">A smaller portion of our fine cheeses, cured meats, and crackers.</p>
-                </div>
-              </div>
-            </li>
-          </ul>
-
           <h3 id="beers" class="headline-2 section-title text-center" style="margin-top: 40px;">Beers</h3>
           <ul class="grid-list">
             <li>
@@ -455,14 +423,14 @@
                     <h3 class="title-3"><a href="#" class="card-title">Draught Half 30cl</a></h3>
                     <span class="span title-2">€3.00</span>
                   </div>
-                  <p class="card-text label-1">A half pint of draught beer KEO, Carlsberg, MAMOS or Sandy.</p>
+                  <p class="card-text label-1">A half pint of draught beer KEO, Carlsberg, MAMOS or Sandy served cold.</p>
                 </div>
               </div>
             </li>
             <li>
               <div class="menu-card hover:card">
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-3.png" width="100" height="100" loading="lazy" alt="Militsa Cider" class="img-cover">
+                  <img src="./assets/images/militsa.png" width="100" height="100" loading="lazy" alt="Militsa Cider" class="img-cover">
                 </figure>
                 <div>
                   <div class="title-wrapper">
@@ -476,21 +444,21 @@
             <li>
               <div class="menu-card hover:card">
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-4.png" width="100" height="100" loading="lazy" alt="Corona" class="img-cover">
+                  <img src="./assets/images/corona.png" width="100" height="100" loading="lazy" alt="Corona" class="img-cover">
                 </figure>
                 <div>
                   <div class="title-wrapper">
                     <h3 class="title-3"><a href="#" class="card-title">Corona</a></h3>
                     <span class="span title-2">€4.50</span>
                   </div>
-                  <p class="card-text label-1">Classic Mexican lager, served with a lime wedge.</p>
+                  <p class="card-text label-1">The Classic Mexican lager, served with a lime wedge.</p>
                 </div>
               </div>
             </li>
             <li>
               <div class="menu-card hover:card">
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-5.png" width="100" height="100" loading="lazy" alt="DAURA GLUTEN FREE" class="img-cover">
+                  <img src="./assets/images/daura.png" width="100" height="100" loading="lazy" alt="Daura Gluten Free" class="img-cover">
                 </figure>
                 <div>
                   <div class="title-wrapper">
@@ -504,11 +472,11 @@
             <li>
               <div class="menu-card hover:card">
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-6.png" width="100" height="100" loading="lazy" alt="Estrella 33cl" class="img-cover">
+                  <img src="./assets/images/estrella.png" width="100" height="100" loading="lazy" alt="Estrella" class="img-cover">
                 </figure>
                 <div>
                   <div class="title-wrapper">
-                    <h3 class="title-3"><a href="#" class="card-title">Estrella 33cl</a></h3>
+                    <h3 class="title-3"><a href="#" class="card-title">Estrella</a></h3>
                     <span class="span title-2">€4.50</span>
                   </div>
                   <p class="card-text label-1">The famous lager from Barcelona, crisp and refreshing.</p>
@@ -518,7 +486,7 @@
             <li>
               <div class="menu-card hover:card">
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-1.png" width="100" height="100" loading="lazy" alt="Guinness" class="img-cover">
+                  <img src="./assets/images/guinness.png" width="100" height="100" loading="lazy" alt="Guinness" class="img-cover">
                 </figure>
                 <div>
                   <div class="title-wrapper">
@@ -532,11 +500,11 @@
             <li>
               <div class="menu-card hover:card">
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-2.png" width="100" height="100" loading="lazy" alt="Heineken 0% Alc" class="img-cover">
+                  <img src="./assets/images/heineken0.png" width="100" height="100" loading="lazy" alt="Heineken 0%" class="img-cover">
                 </figure>
                 <div>
                   <div class="title-wrapper">
-                    <h3 class="title-3"><a href="#" class="card-title">Heineken 0% Alc</a></h3>
+                    <h3 class="title-3"><a href="#" class="card-title">Heineken 0%</a></h3>
                     <span class="span title-2">€4.50</span>
                   </div>
                   <p class="card-text label-1">A balanced, alcohol-free beer with a refreshing taste.</p>
@@ -546,7 +514,7 @@
             <li>
               <div class="menu-card hover:card">
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-3.png" width="100" height="100" loading="lazy" alt="INEDIT" class="img-cover">
+                  <img src="./assets/images/inedit.png" width="100" height="100" loading="lazy" alt="INEDIT" class="img-cover">
                 </figure>
                 <div>
                   <div class="title-wrapper">
@@ -560,7 +528,7 @@
             <li>
               <div class="menu-card hover:card">
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-4.png" width="100" height="100" loading="lazy" alt="Kronenbourg 1664 Blanc" class="img-cover">
+                  <img src="./assets/images/1664.png" width="100" height="100" loading="lazy" alt="Kronenbourg 1664 Blanc" class="img-cover">
                 </figure>
                 <div>
                   <div class="title-wrapper">
@@ -574,35 +542,7 @@
             <li>
               <div class="menu-card hover:card">
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-5.png" width="100" height="100" loading="lazy" alt="Sandy Weiss 1/2 pint" class="img-cover">
-                </figure>
-                <div>
-                  <div class="title-wrapper">
-                    <h3 class="title-3"><a href="#" class="card-title">Sandy Weiss 1/2 pint</a></h3>
-                    <span class="span title-2">€3.50</span>
-                  </div>
-                  <p class="card-text label-1">A half pint of refreshing Sandy Weiss beer.</p>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="menu-card hover:card">
-                <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-6.png" width="100" height="100" loading="lazy" alt="Sandy Weiss pint" class="img-cover">
-                </figure>
-                <div>
-                  <div class="title-wrapper">
-                    <h3 class="title-3"><a href="#" class="card-title">Sandy Weiss pint</a></h3>
-                    <span class="span title-2">€5.50</span>
-                  </div>
-                  <p class="card-text label-1">A full pint of refreshing Sandy Weiss beer.</p>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="menu-card hover:card">
-                <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-1.png" width="100" height="100" loading="lazy" alt="Septem IPA" class="img-cover">
+                  <img src="./assets/images/septem.png" width="100" height="100" loading="lazy" alt="Septem IPA" class="img-cover">
                 </figure>
                 <div>
                   <div class="title-wrapper">
@@ -620,7 +560,7 @@
             <li>
               <div class="menu-card hover:card">
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-1.png" width="100" height="100" loading="lazy" alt="Amaretto Sour" class="img-cover">
+                  <img src="./assets/images/amaretto.png" width="100" height="100" loading="lazy" alt="Amaretto Sour" class="img-cover">
                 </figure>
                 <div>
                   <div class="title-wrapper">
@@ -634,7 +574,7 @@
             <li>
               <div class="menu-card hover:card">
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-2.png" width="100" height="100" loading="lazy" alt="Americano" class="img-cover">
+                  <img src="./assets/images/americano.png" width="100" height="100" loading="lazy" alt="Americano" class="img-cover">
                 </figure>
                 <div>
                   <div class="title-wrapper">
@@ -648,7 +588,7 @@
             <li>
               <div class="menu-card hover:card">
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-3.png" width="100" height="100" loading="lazy" alt="Brandy Sour" class="img-cover">
+                  <img src="./assets/images/brandy sour.png" width="100" height="100" loading="lazy" alt="Brandy Sour" class="img-cover">
                 </figure>
                 <div>
                   <div class="title-wrapper">
@@ -662,7 +602,7 @@
             <li>
               <div class="menu-card hover:card">
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-4.png" width="100" height="100" loading="lazy" alt="Cuba Libre" class="img-cover">
+                  <img src="./assets/images/cuba libre.png" width="100" height="100" loading="lazy" alt="Cuba Libre" class="img-cover">
                 </figure>
                 <div>
                   <div class="title-wrapper">
@@ -676,7 +616,7 @@
             <li>
               <div class="menu-card hover:card">
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-5.png" width="100" height="100" loading="lazy" alt="Dark and Stormy" class="img-cover">
+                  <img src="./assets/images/darkstormy.png" width="100" height="100" loading="lazy" alt="Dark and Stormy" class="img-cover">
                 </figure>
                 <div>
                   <div class="title-wrapper">
@@ -690,7 +630,7 @@
             <li>
               <div class="menu-card hover:card">
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-6.png" width="100" height="100" loading="lazy" alt="Mastiha Sour" class="img-cover">
+                  <img src="./assets/images/mastihasour.png" width="100" height="100" loading="lazy" alt="Mastiha Sour" class="img-cover">
                 </figure>
                 <div>
                   <div class="title-wrapper">
@@ -704,7 +644,7 @@
             <li>
               <div class="menu-card hover:card">
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-1.png" width="100" height="100" loading="lazy" alt="Negroni" class="img-cover">
+                  <img src="./assets/images/negroni.png" width="100" height="100" loading="lazy" alt="Negroni" class="img-cover">
                 </figure>
                 <div>
                   <div class="title-wrapper">
@@ -718,21 +658,21 @@
             <li>
               <div class="menu-card hover:card">
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-2.png" width="100" height="100" loading="lazy" alt="Old Fashioned" class="img-cover">
+                  <img src="./assets/images/old fashioned.png" width="100" height="100" loading="lazy" alt="Old Fashioned" class="img-cover">
                 </figure>
                 <div>
                   <div class="title-wrapper">
                     <h3 class="title-3"><a href="#" class="card-title">Old Fashioned</a></h3>
                     <span class="span title-2">€8.50</span>
                   </div>
-                  <p class="card-text label-1">Bourbon, sugar, bitters — timeless, robust, and warming.</p>
+                  <p class="card-text label-1">Bourbon, bitters. timeless, robust and warming.</p>
                 </div>
               </div>
             </li>
             <li>
               <div class="menu-card hover:card">
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-3.png" width="100" height="100" loading="lazy" alt="Penikilini" class="img-cover">
+                  <img src="./assets/images/penikilini.png" width="100" height="100" loading="lazy" alt="Penikilini" class="img-cover">
                 </figure>
                 <div>
                   <div class="title-wrapper">
@@ -746,14 +686,14 @@
             <li>
               <div class="menu-card hover:card">
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-4.png" width="100" height="100" loading="lazy" alt="Zivaneza" class="img-cover">
+                  <img src="./assets/images/zivaneza.png" width="100" height="100" loading="lazy" alt="Zivaneza" class="img-cover">
                 </figure>
                 <div>
                   <div class="title-wrapper">
                     <h3 class="title-3"><a href="#" class="card-title">Zivaneza</a></h3>
                     <span class="span title-2">€8.50</span>
                   </div>
-                  <p class="card-text label-1">A powerful and aromatic cocktail featuring local Zivania.</p>
+                  <p class="card-text label-1">A powerful and aromatic cocktail featuring local Zivania, Lime and Passion Fruit.</p>
                 </div>
               </div>
             </li>
@@ -764,11 +704,11 @@
             <li>
               <div class="menu-card hover:card">
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-1.png" width="100" height="100" loading="lazy" alt="Beefeater Gin" class="img-cover">
+                  <img src="./assets/images/beefeater.png" width="100" height="100" loading="lazy" alt="Beefeater" class="img-cover">
                 </figure>
                 <div>
                   <div class="title-wrapper">
-                    <h3 class="title-3"><a href="#" class="card-title">Beefeater Gin</a></h3>
+                    <h3 class="title-3"><a href="#" class="card-title">Beefeater</a></h3>
                     <span class="span title-2">€6.00</span>
                   </div>
                   <p class="card-text label-1">Classic London Dry Gin, perfectly balanced with juniper notes.</p>
@@ -778,11 +718,11 @@
             <li>
               <div class="menu-card hover:card">
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-2.png" width="100" height="100" loading="lazy" alt="Roku Gin" class="img-cover">
+                  <img src="./assets/images/roku.png" width="100" height="100" loading="lazy" alt="Roku" class="img-cover">
                 </figure>
                 <div>
                   <div class="title-wrapper">
-                    <h3 class="title-3"><a href="#" class="card-title">Roku Gin</a></h3>
+                    <h3 class="title-3"><a href="#" class="card-title">Roku</a></h3>
                     <span class="span title-2">€7.50</span>
                   </div>
                   <p class="card-text label-1">Japanese craft gin with six unique botanicals, including yuzu peel.</p>
@@ -792,7 +732,7 @@
             <li>
               <div class="menu-card hover:card">
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-3.png" width="100" height="100" loading="lazy" alt="Tanqueray 0%" class="img-cover">
+                  <img src="./assets/images/tanq0.png" width="100" height="100" loading="lazy" alt="Tanqueray 0%" class="img-cover">
                 </figure>
                 <div>
                   <div class="title-wrapper">
@@ -806,7 +746,7 @@
             <li>
               <div class="menu-card hover:card">
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-4.png" width="100" height="100" loading="lazy" alt="Tanqueray Gin" class="img-cover">
+                  <img src="./assets/images/tanq.png" width="100" height="100" loading="lazy" alt="Tanqueray" class="img-cover">
                 </figure>
                 <div>
                   <div class="title-wrapper">
@@ -824,11 +764,11 @@
             <li>
               <div class="menu-card hover:card">
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-1.png" width="100" height="100" loading="lazy" alt="Black label Johnny Walker" class="img-cover">
+                  <img src="./assets/images/blacklabel.png" width="100" height="100" loading="lazy" alt="Johnny Walker Black Label" class="img-cover">
                 </figure>
                 <div>
                   <div class="title-wrapper">
-                    <h3 class="title-3"><a href="#" class="card-title">Black label Johnny Walker</a></h3>
+                    <h3 class="title-3"><a href="#" class="card-title">Johnny Walker Black Label</a></h3>
                     <span class="span title-2">€8.00</span>
                   </div>
                   <p class="card-text label-1">A rich, smooth Scotch whisky blend, aged for 12 years.</p>
@@ -838,11 +778,11 @@
             <li>
               <div class="menu-card hover:card">
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-2.png" width="100" height="100" loading="lazy" alt="Buffalo trace" class="img-cover">
+                  <img src="./assets/images/buffalo.png" width="100" height="100" loading="lazy" alt="Buffalo Trace" class="img-cover">
                 </figure>
                 <div>
                   <div class="title-wrapper">
-                    <h3 class="title-3"><a href="#" class="card-title">Buffalo trace</a></h3>
+                    <h3 class="title-3"><a href="#" class="card-title">Buffalo Trace</a></h3>
                     <span class="span title-2">€7.00</span>
                   </div>
                   <p class="card-text label-1">A classic Kentucky straight bourbon, deep and complex.</p>
@@ -852,11 +792,11 @@
             <li>
               <div class="menu-card hover:card">
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-3.png" width="100" height="100" loading="lazy" alt="Chivas" class="img-cover">
+                  <img src="./assets/images/chivas.png" width="100" height="100" loading="lazy" alt="Chivas Regal" class="img-cover">
                 </figure>
                 <div>
                   <div class="title-wrapper">
-                    <h3 class="title-3"><a href="#" class="card-title">Chivas</a></h3>
+                    <h3 class="title-3"><a href="#" class="card-title">Chivas Regal</a></h3>
                     <span class="span title-2">€8.00</span>
                   </div>
                   <p class="card-text label-1">A premium blended Scotch whisky known for its smoothness.</p>
@@ -866,11 +806,11 @@
             <li>
               <div class="menu-card hover:card">
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-4.png" width="100" height="100" loading="lazy" alt="Famous" class="img-cover">
+                  <img src="./assets/images/famous.png" width="100" height="100" loading="lazy" alt="Famous Grouse" class="img-cover">
                 </figure>
                 <div>
                   <div class="title-wrapper">
-                    <h3 class="title-3"><a href="#" class="card-title">Famous</a></h3>
+                    <h3 class="title-3"><a href="#" class="card-title">Famous Grouse </a></h3>
                     <span class="span title-2">€6.00</span>
                   </div>
                   <p class="card-text label-1">A popular and well-balanced blended Scotch whisky.</p>
@@ -880,7 +820,7 @@
             <li>
               <div class="menu-card hover:card">
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-5.png" width="100" height="100" loading="lazy" alt="Fireball" class="img-cover">
+                  <img src="./assets/images/fireball.png" width="100" height="100" loading="lazy" alt="Fireball" class="img-cover">
                 </figure>
                 <div>
                   <div class="title-wrapper">
@@ -894,11 +834,11 @@
             <li>
               <div class="menu-card hover:card">
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-6.png" width="100" height="100" loading="lazy" alt="Gentlemen's Jack" class="img-cover">
+                  <img src="./assets/images/gentlejack.png" width="100" height="100" loading="lazy" alt="Gentleman Jack" class="img-cover">
                 </figure>
                 <div>
                   <div class="title-wrapper">
-                    <h3 class="title-3"><a href="#" class="card-title">Gentlemen's Jack</a></h3>
+                    <h3 class="title-3"><a href="#" class="card-title">Gentleman Jack</a></h3>
                     <span class="span title-2">€8.00</span>
                   </div>
                   <p class="card-text label-1">A double-mellowed Tennessee whiskey from Jack Daniel's.</p>
@@ -908,7 +848,7 @@
             <li>
               <div class="menu-card hover:card">
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-1.png" width="100" height="100" loading="lazy" alt="Glenfiddich" class="img-cover">
+                  <img src="./assets/images/glen.png" width="100" height="100" loading="lazy" alt="Glenfiddich" class="img-cover">
                 </figure>
                 <div>
                   <div class="title-wrapper">
@@ -922,7 +862,7 @@
             <li>
               <div class="menu-card hover:card">
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-2.png" width="100" height="100" loading="lazy" alt="Glenlivet" class="img-cover">
+                  <img src="./assets/images/glenlivet.png" width="100" height="100" loading="lazy" alt="Glenlivet" class="img-cover">
                 </figure>
                 <div>
                   <div class="title-wrapper">
@@ -936,7 +876,7 @@
             <li>
               <div class="menu-card hover:card">
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-3.png" width="100" height="100" loading="lazy" alt="J&B" class="img-cover">
+                  <img src="./assets/images/jb.png" width="100" height="100" loading="lazy" alt="J&B" class="img-cover">
                 </figure>
                 <div>
                   <div class="title-wrapper">
@@ -950,7 +890,7 @@
             <li>
               <div class="menu-card hover:card">
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-4.png" width="100" height="100" loading="lazy" alt="Jack Daniels" class="img-cover">
+                  <img src="./assets/images/jack.png" width="100" height="100" loading="lazy" alt="Jack Daniels" class="img-cover">
                 </figure>
                 <div>
                   <div class="title-wrapper">
@@ -964,7 +904,7 @@
             <li>
               <div class="menu-card hover:card">
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-5.png" width="100" height="100" loading="lazy" alt="Jameson" class="img-cover">
+                  <img src="./assets/images/jameson.png" width="100" height="100" loading="lazy" alt="Jameson" class="img-cover">
                 </figure>
                 <div>
                   <div class="title-wrapper">
@@ -978,7 +918,7 @@
             <li>
               <div class="menu-card hover:card">
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-6.png" width="100" height="100" loading="lazy" alt="Jameson Edition" class="img-cover">
+                  <img src="./assets/images/stout.png" width="100" height="100" loading="lazy" alt="Jameson Edition" class="img-cover">
                 </figure>
                 <div>
                   <div class="title-wrapper">
@@ -992,7 +932,7 @@
             <li>
               <div class="menu-card hover:card">
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-1.png" width="100" height="100" loading="lazy" alt="Makers Mark" class="img-cover">
+                  <img src="./assets/images/makersmark.png" width="100" height="100" loading="lazy" alt="Makers Mark" class="img-cover">
                 </figure>
                 <div>
                   <div class="title-wrapper">
@@ -1006,11 +946,11 @@
             <li>
               <div class="menu-card hover:card">
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-2.png" width="100" height="100" loading="lazy" alt="Monkey shoulder" class="img-cover">
+                  <img src="./assets/images/monkey.png" width="100" height="100" loading="lazy" alt="Monkey Shoulder" class="img-cover">
                 </figure>
                 <div>
                   <div class="title-wrapper">
-                    <h3 class="title-3"><a href="#" class="card-title">Monkey shoulder</a></h3>
+                    <h3 class="title-3"><a href="#" class="card-title">Monkey Shoulder</a></h3>
                     <span class="span title-2">€8.00</span>
                   </div>
                   <p class="card-text label-1">A smooth and rich blended malt Scotch, perfect for mixing.</p>
@@ -1020,7 +960,7 @@
             <li>
               <div class="menu-card hover:card">
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-3.png" width="100" height="100" loading="lazy" alt="Platte Valley" class="img-cover">
+                  <img src="./assets/images/platte valley.png" width="100" height="100" loading="lazy" alt="Platte Valley" class="img-cover">
                 </figure>
                 <div>
                   <div class="title-wrapper">
@@ -1034,7 +974,7 @@
             <li>
               <div class="menu-card hover:card">
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-4.png" width="100" height="100" loading="lazy" alt="Smokehead" class="img-cover">
+                  <img src="./assets/images/smokehead.png" width="100" height="100" loading="lazy" alt="Smokehead" class="img-cover">
                 </figure>
                 <div>
                   <div class="title-wrapper">
@@ -1048,7 +988,7 @@
             <li>
               <div class="menu-card hover:card">
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-5.png" width="100" height="100" loading="lazy" alt="Talisker 10 Years" class="img-cover">
+                  <img src="./assets/images/talisker.png" width="100" height="100" loading="lazy" alt="Talisker 10 Years" class="img-cover">
                 </figure>
                 <div>
                   <div class="title-wrapper">
@@ -1062,7 +1002,7 @@
             <li>
               <div class="menu-card hover:card">
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-6.png" width="100" height="100" loading="lazy" alt="Tullamore" class="img-cover">
+                  <img src="./assets/images/tullamore.png" width="100" height="100" loading="lazy" alt="Tullamore" class="img-cover">
                 </figure>
                 <div>
                   <div class="title-wrapper">
@@ -1076,11 +1016,11 @@
             <li>
               <div class="menu-card hover:card">
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-1.png" width="100" height="100" loading="lazy" alt="Wild turkey" class="img-cover">
+                  <img src="./assets/images/wild turkey.png" width="100" height="100" loading="lazy" alt="Wild Turkey" class="img-cover">
                 </figure>
                 <div>
                   <div class="title-wrapper">
-                    <h3 class="title-3"><a href="#" class="card-title">Wild turkey</a></h3>
+                    <h3 class="title-3"><a href="#" class="card-title">Wild Turkey</a></h3>
                     <span class="span title-2">€9.00</span>
                   </div>
                   <p class="card-text label-1">A bold, high-rye Kentucky straight bourbon.</p>
@@ -1094,7 +1034,7 @@
             <li>
               <div class="menu-card hover:card">
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-1.png" width="100" height="100" loading="lazy" alt="Baileys" class="img-cover">
+                  <img src="./assets/images/baileys.png" width="100" height="100" loading="lazy" alt="Baileys" class="img-cover">
                 </figure>
                 <div>
                   <div class="title-wrapper">
@@ -1108,7 +1048,7 @@
             <li>
               <div class="menu-card hover:card">
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-2.png" width="100" height="100" loading="lazy" alt="Campari" class="img-cover">
+                  <img src="./assets/images/campari.png" width="100" height="100" loading="lazy" alt="Campari" class="img-cover">
                 </figure>
                 <div>
                   <div class="title-wrapper">
@@ -1122,7 +1062,7 @@
             <li>
               <div class="menu-card hover:card">
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-3.png" width="100" height="100" loading="lazy" alt="Cointreau" class="img-cover">
+                  <img src="./assets/images/cointreau.png" width="100" height="100" loading="lazy" alt="Cointreau" class="img-cover">
                 </figure>
                 <div>
                   <div class="title-wrapper">
@@ -1136,7 +1076,7 @@
             <li>
               <div class="menu-card hover:card">
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-4.png" width="100" height="100" loading="lazy" alt="Disaronno" class="img-cover">
+                  <img src="./assets/images/disaronno.png" width="100" height="100" loading="lazy" alt="Disaronno" class="img-cover">
                 </figure>
                 <div>
                   <div class="title-wrapper">
@@ -1150,7 +1090,7 @@
             <li>
               <div class="menu-card hover:card">
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-5.png" width="100" height="100" loading="lazy" alt="Dolin Vermouth" class="img-cover">
+                  <img src="./assets/images/dolin.png" width="100" height="100" loading="lazy" alt="Dolin Vermouth" class="img-cover">
                 </figure>
                 <div>
                   <div class="title-wrapper">
@@ -1164,7 +1104,7 @@
             <li>
               <div class="menu-card hover:card">
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-6.png" width="100" height="100" loading="lazy" alt="Drambuie" class="img-cover">
+                  <img src="./assets/images/drambuie.png" width="100" height="100" loading="lazy" alt="Drambuie" class="img-cover">
                 </figure>
                 <div>
                   <div class="title-wrapper">
@@ -1178,7 +1118,7 @@
             <li>
               <div class="menu-card hover:card">
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-1.png" width="100" height="100" loading="lazy" alt="Frangelico" class="img-cover">
+                  <img src="./assets/images/frangelico.png" width="100" height="100" loading="lazy" alt="Frangelico" class="img-cover">
                 </figure>
                 <div>
                   <div class="title-wrapper">
@@ -1192,7 +1132,7 @@
             <li>
               <div class="menu-card hover:card">
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-2.png" width="100" height="100" loading="lazy" alt="Kahlua" class="img-cover">
+                  <img src="./assets/images/kahlua.png" width="100" height="100" loading="lazy" alt="Kahlua" class="img-cover">
                 </figure>
                 <div>
                   <div class="title-wrapper">
@@ -1206,35 +1146,7 @@
             <li>
               <div class="menu-card hover:card">
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-3.png" width="100" height="100" loading="lazy" alt="Malibu" class="img-cover">
-                </figure>
-                <div>
-                  <div class="title-wrapper">
-                    <h3 class="title-3"><a href="#" class="card-title">Malibu</a></h3>
-                    <span class="span title-2">€6.00</span>
-                  </div>
-                  <p class="card-text label-1">A smooth, coconut-flavored rum liqueur.</p>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="menu-card hover:card">
-                <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-4.png" width="100" height="100" loading="lazy" alt="Martini" class="img-cover">
-                </figure>
-                <div>
-                  <div class="title-wrapper">
-                    <h3 class="title-3"><a href="#" class="card-title">Martini</a></h3>
-                    <span class="span title-2">€6.00</span>
-                  </div>
-                  <p class="card-text label-1">Classic Italian vermouth, available in different styles.</p>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="menu-card hover:card">
-                <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-5.png" width="100" height="100" loading="lazy" alt="Mastiha Loukatos" class="img-cover">
+                  <img src="./assets/images/mastiha.png" width="100" height="100" loading="lazy" alt="Mastiha Loukatos" class="img-cover">
                 </figure>
                 <div>
                   <div class="title-wrapper">
@@ -1248,7 +1160,7 @@
             <li>
               <div class="menu-card hover:card">
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-6.png" width="100" height="100" loading="lazy" alt="Pimm's" class="img-cover">
+                  <img src="./assets/images/pimms.png" width="100" height="100" loading="lazy" alt="Pimm's" class="img-cover">
                 </figure>
                 <div>
                   <div class="title-wrapper">
@@ -1262,7 +1174,7 @@
             <li>
               <div class="menu-card hover:card">
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-1.png" width="100" height="100" loading="lazy" alt="Tia Maria" class="img-cover">
+                  <img src="./assets/images/tiamaria.png" width="100" height="100" loading="lazy" alt="Tia Maria" class="img-cover">
                 </figure>
                 <div>
                   <div class="title-wrapper">
@@ -1280,7 +1192,7 @@
             <li>
               <div class="menu-card hover:card">
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-1.png" width="100" height="100" loading="lazy" alt="Karafaki Ouzo" class="img-cover">
+                  <img src="./assets/images/ouzo karaf.png" width="100" height="100" loading="lazy" alt="Karafaki Ouzo" class="img-cover">
                 </figure>
                 <div>
                   <div class="title-wrapper">
@@ -1294,7 +1206,7 @@
             <li>
               <div class="menu-card hover:card">
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-2.png" width="100" height="100" loading="lazy" alt="Karafaki Tsipouro" class="img-cover">
+                  <img src="./assets/images/karaf tsip.png" width="100" height="100" loading="lazy" alt="Karafaki Tsipouro" class="img-cover">
                 </figure>
                 <div>
                   <div class="title-wrapper">
@@ -1308,7 +1220,7 @@
             <li>
               <div class="menu-card hover:card">
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-3.png" width="100" height="100" loading="lazy" alt="Karafaki Zivania" class="img-cover">
+                  <img src="./assets/images/karaf ziv.png" width="100" height="100" loading="lazy" alt="Karafaki Zivania" class="img-cover">
                 </figure>
                 <div>
                   <div class="title-wrapper">
@@ -1322,7 +1234,7 @@
             <li>
               <div class="menu-card hover:card">
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-4.png" width="100" height="100" loading="lazy" alt="Commandaria" class="img-cover">
+                  <img src="./assets/images/Commandaria.png" width="100" height="100" loading="lazy" alt="Commandaria" class="img-cover">
                 </figure>
                 <div>
                   <div class="title-wrapper">
@@ -1336,39 +1248,39 @@
             <li>
               <div class="menu-card hover:card">
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-5.png" width="100" height="100" loading="lazy" alt="White Wine" class="img-cover">
+                  <img src="./assets/images/whitewine.png" width="100" height="100" loading="lazy" alt="White Wine" class="img-cover">
                 </figure>
                 <div>
                   <div class="title-wrapper">
-                    <h3 class="title-3"><a href="#" class="card-title">White Wine (Local)</a></h3>
+                    <h3 class="title-3"><a href="#" class="card-title">White Wine</a></h3>
                     <span class="span title-2">€5.00</span>
                   </div>
-                  <p class="card-text label-1">A glass of crisp, locally-produced white wine.</p>
+                  <p class="card-text label-1">A glass of Moschofilero white wine from Ellinika Kelaria.</p>
                 </div>
               </div>
             </li>
             <li>
               <div class="menu-card hover:card">
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-6.png" width="100" height="100" loading="lazy" alt="Red Wine" class="img-cover">
+                  <img src="./assets/images/redwine.png" width="100" height="100" loading="lazy" alt="Red Wine" class="img-cover">
                 </figure>
                 <div>
                   <div class="title-wrapper">
-                    <h3 class="title-3"><a href="#" class="card-title">Red Wine (Local)</a></h3>
+                    <h3 class="title-3"><a href="#" class="card-title">Red Wine</a></h3>
                     <span class="span title-2">€5.00</span>
                   </div>
-                  <p class="card-text label-1">A glass of smooth, locally-produced red wine.</p>
+                  <p class="card-text label-1">A glass of Agioritiko red wine from Ellinika Kelaria.</p>
                 </div>
               </div>
             </li>
             <li>
               <div class="menu-card hover:card">
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-1.png" width="100" height="100" loading="lazy" alt="Metaxa 7*" class="img-cover">
+                  <img src="./assets/images/metaxa.png" width="100" height="100" loading="lazy" alt="Metaxa 7 ★" class="img-cover">
                 </figure>
                 <div>
                   <div class="title-wrapper">
-                    <h3 class="title-3"><a href="#" class="card-title">Metaxa 7*</a></h3>
+                    <h3 class="title-3"><a href="#" class="card-title">Metaxa 7 ★</a></h3>
                     <span class="span title-2">€7.00</span>
                   </div>
                   <p class="card-text label-1">A smooth, aged Greek spirit, amber-colored and aromatic.</p>
@@ -1378,53 +1290,53 @@
             <li>
               <div class="menu-card hover:card">
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-2.png" width="100" height="100" loading="lazy" alt="Ouzo" class="img-cover">
+                  <img src="./assets/images/ouzo.png" width="100" height="100" loading="lazy" alt="Ouzo" class="img-cover">
                 </figure>
                 <div>
                   <div class="title-wrapper">
                     <h3 class="title-3"><a href="#" class="card-title">Ouzo</a></h3>
                     <span class="span title-2">€5.00</span>
                   </div>
-                  <p class="card-text label-1">A glass of traditional Greek anise-flavored aperitif.</p>
+                  <p class="card-text label-1">A glass of traditional Greek anise-flavored aperitif. Selection from Varvagianni (Blue/Green) and Plomari.</p>
                 </div>
               </div>
             </li>
             <li>
               <div class="menu-card hover:card">
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-3.png" width="100" height="100" loading="lazy" alt="Tsipouro" class="img-cover">
+                  <img src="./assets/images/tsipouro.png" width="100" height="100" loading="lazy" alt="Tsipouro" class="img-cover">
                 </figure>
                 <div>
                   <div class="title-wrapper">
                     <h3 class="title-3"><a href="#" class="card-title">Tsipouro</a></h3>
                     <span class="span title-2">€5.00</span>
                   </div>
-                  <p class="card-text label-1">A glass of strong Greek pomace brandy.</p>
+                  <p class="card-text label-1">A glass of strong Greek pomace brandy with or without licorice.</p>
                 </div>
               </div>
             </li>
             <li>
               <div class="menu-card hover:card">
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-4.png" width="100" height="100" loading="lazy" alt="Zivania" class="img-cover">
+                  <img src="./assets/images/zivania.png" width="100" height="100" loading="lazy" alt="Zivania" class="img-cover">
                 </figure>
                 <div>
                   <div class="title-wrapper">
                     <h3 class="title-3"><a href="#" class="card-title">Zivania</a></h3>
                     <span class="span title-2">€5.00</span>
                   </div>
-                  <p class="card-text label-1">A glass of traditional Cypriot pomace brandy.</p>
+                  <p class="card-text label-1">A shot from our selection of traditional and aged zivania.</p>
                 </div>
               </div>
             </li>
           </ul>
 
-          <h3 class="headline-2 section-title text-center" style="margin-top: 40px;">Rum / Ρούμι</h3>
+          <h3 class="headline-2 section-title text-center" style="margin-top: 40px;">Rum</h3>
           <ul class="grid-list">
             <li>
               <div class="menu-card hover:card">
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-1.png" width="100" height="100" loading="lazy" alt="Kraken" class="img-cover">
+                  <img src="./assets/images/kraken.png" width="100" height="100" loading="lazy" alt="Kraken" class="img-cover">
                 </figure>
                 <div>
                   <div class="title-wrapper">
@@ -1438,35 +1350,7 @@
             <li>
               <div class="menu-card hover:card">
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-2.png" width="100" height="100" loading="lazy" alt="Plantation dark" class="img-cover">
-                </figure>
-                <div>
-                  <div class="title-wrapper">
-                    <h3 class="title-3"><a href="#" class="card-title">Plantation dark</a></h3>
-                    <span class="span title-2">€6.00</span>
-                  </div>
-                  <p class="card-text label-1">A rich and complex dark rum, perfect for sipping or cocktails.</p>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="menu-card hover:card">
-                <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-3.png" width="100" height="100" loading="lazy" alt="Plantation white" class="img-cover">
-                </figure>
-                <div>
-                  <div class="title-wrapper">
-                    <h3 class="title-3"><a href="#" class="card-title">Plantation white</a></h3>
-                    <span class="span title-2">€6.00</span>
-                  </div>
-                  <p class="card-text label-1">A smooth and balanced white rum, ideal for mojitos.</p>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="menu-card hover:card">
-                <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-4.png" width="100" height="100" loading="lazy" alt="Sailor Jerry" class="img-cover">
+                  <img src="./assets/images/sailor.png" width="100" height="100" loading="lazy" alt="Sailor Jerry" class="img-cover">
                 </figure>
                 <div>
                   <div class="title-wrapper">
@@ -1477,28 +1361,42 @@
                 </div>
               </div>
             </li>
-          </ul>
-
-          <h3 class="headline-2 section-title text-center" style="margin-top: 40px;">Vodka / Tequila</h3>
-          <ul class="grid-list">
             <li>
               <div class="menu-card hover:card">
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-1.png" width="100" height="100" loading="lazy" alt="Tequila" class="img-cover">
+                  <img src="./assets/images/plantation dark.png" width="100" height="100" loading="lazy" alt="Plantation Dark" class="img-cover">
                 </figure>
                 <div>
                   <div class="title-wrapper">
-                    <h3 class="title-3"><a href="#" class="card-title">Tequila</a></h3>
+                    <h3 class="title-3"><a href="#" class="card-title">Plantation Dark</a></h3>
                     <span class="span title-2">€6.00</span>
                   </div>
-                  <p class="card-text label-1">A classic silver tequila, perfect for shots or margaritas.</p>
+                  <p class="card-text label-1">A rich and complex dark rum, perfect for sipping.</p>
                 </div>
               </div>
             </li>
             <li>
               <div class="menu-card hover:card">
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-2.png" width="100" height="100" loading="lazy" alt="Beluga" class="img-cover">
+                  <img src="./assets/images/plantation white.png" width="100" height="100" loading="lazy" alt="Plantation white" class="img-cover">
+                </figure>
+                <div>
+                  <div class="title-wrapper">
+                    <h3 class="title-3"><a href="#" class="card-title">Plantation White</a></h3>
+                    <span class="span title-2">€6.00</span>
+                  </div>
+                  <p class="card-text label-1">A smooth and balanced white rum.</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+          <h3 class="headline-2 section-title text-center" style="margin-top: 40px;">Vodka</h3>
+          <ul class="grid-list">
+            <li>
+              <div class="menu-card hover:card">
+                <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                  <img src="./assets/images/beluga.png" width="100" height="100" loading="lazy" alt="Beluga" class="img-cover">
                 </figure>
                 <div>
                   <div class="title-wrapper">
@@ -1512,7 +1410,7 @@
             <li>
               <div class="menu-card hover:card">
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-3.png" width="100" height="100" loading="lazy" alt="Crystal Vodka" class="img-cover">
+                  <img src="./assets/images/crystal.png" width="100" height="100" loading="lazy" alt="Crystal Vodka" class="img-cover">
                 </figure>
                 <div>
                   <div class="title-wrapper">
@@ -1526,25 +1424,25 @@
             <li>
               <div class="menu-card hover:card">
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-4.png" width="100" height="100" loading="lazy" alt="Elit" class="img-cover">
+                  <img src="./assets/images/elit1.png" width="100" height="100" loading="lazy" alt="Elit" class="img-cover">
                 </figure>
                 <div>
                   <div class="title-wrapper">
-                    <h3 class="title-3"><a href="#" class="card-title">Elit</a></h3>
+                    <h3 class="title-3"><a href="#" class="card-title">Stoli Elit</a></h3>
                     <span class="span title-2">€9.00</span>
                   </div>
-                  <p class="card-text label-1">An ultra-premium vodka from Stoli, offering pristine clarity.</p>
+                  <p class="card-text label-1">An ultra-premium vodka from Stolichnaya, offering pristine clarity.</p>
                 </div>
               </div>
             </li>
             <li>
               <div class="menu-card hover:card">
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-5.png" width="100" height="100" loading="lazy" alt="Vodka Stoli" class="img-cover">
+                  <img src="./assets/images/stoli.png" width="100" height="100" loading="lazy" alt="Stoli" class="img-cover">
                 </figure>
                 <div>
                   <div class="title-wrapper">
-                    <h3 class="title-3"><a href="#" class="card-title">Vodka Stoli</a></h3>
+                    <h3 class="title-3"><a href="#" class="card-title">Stoli</a></h3>
                     <span class="span title-2">€6.00</span>
                   </div>
                   <p class="card-text label-1">Classic Stolichnaya vodka, clean and smooth.</p>
@@ -1553,104 +1451,12 @@
             </li>
           </ul>
 
-          <h3 class="headline-2 section-title text-center" style="margin-top: 40px;">Cold Beverages / Αναψυκτικά</h3>
+ <h3 class="headline-2 section-title text-center" style="margin-top: 40px;">Shots</h3>
           <ul class="grid-list">
             <li>
               <div class="menu-card hover:card">
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-1.png" width="100" height="100" loading="lazy" alt="Juice" class="img-cover">
-                </figure>
-                <div>
-                  <div class="title-wrapper">
-                    <h3 class="title-3"><a href="#" class="card-title">Juice</a></h3>
-                    <span class="span title-2">€2.50</span>
-                  </div>
-                  <p class="card-text label-1">A selection of refreshing fruit juices.</p>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="menu-card hover:card">
-                <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-2.png" width="100" height="100" loading="lazy" alt="Sodas" class="img-cover">
-                </figure>
-                <div>
-                  <div class="title-wrapper">
-                    <h3 class="title-3"><a href="#" class="card-title">Sodas</a></h3>
-                    <span class="span title-2">€2.50</span>
-                  </div>
-                  <p class="card-text label-1">Choose from our range of classic soft drinks.</p>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="menu-card hover:card">
-                <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-3.png" width="100" height="100" loading="lazy" alt="Ξινόνερο" class="img-cover">
-                </figure>
-                <div>
-                  <div class="title-wrapper">
-                    <h3 class="title-3"><a href="#" class="card-title">Ξινόνερο</a></h3>
-                    <span class="span title-2">€3.00</span>
-                  </div>
-                  <p class="card-text label-1">Natural sparkling mineral water from Florina.</p>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="menu-card hover:card">
-                <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-4.png" width="100" height="100" loading="lazy" alt="Water 50cl" class="img-cover">
-                </figure>
-                <div>
-                  <div class="title-wrapper">
-                    <h3 class="title-3"><a href="#" class="card-title">Water 50cl</a></h3>
-                    <span class="span title-2">€0.50</span>
-                  </div>
-                  <p class="card-text label-1">A bottle of still mineral water.</p>
-                </div>
-              </div>
-            </li>
-          </ul>
-
-          <h3 class="headline-2 section-title text-center" style="margin-top: 40px;">Coffee / Καφές</h3>
-          <ul class="grid-list">
-            <li>
-              <div class="menu-card hover:card">
-                <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-1.png" width="100" height="100" loading="lazy" alt="Coffee" class="img-cover">
-                </figure>
-                <div>
-                  <div class="title-wrapper">
-                    <h3 class="title-3"><a href="#" class="card-title">Coffee / Καφές</a></h3>
-                    <span class="span title-2">€2.50</span>
-                  </div>
-                  <p class="card-text label-1">A perfectly brewed coffee, served just the way you like it.</p>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="menu-card hover:card">
-                <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-2.png" width="100" height="100" loading="lazy" alt="Καφές Διπλός" class="img-cover">
-                </figure>
-                <div>
-                  <div class="title-wrapper">
-                    <h3 class="title-3"><a href="#" class="card-title">Καφές Διπλός</a></h3>
-                    <span class="span title-2">€3.00</span>
-                  </div>
-                  <p class="card-text label-1">A double shot of our perfectly brewed coffee.</p>
-                </div>
-              </div>
-            </li>
-          </ul>
-
-          <h3 class="headline-2 section-title text-center" style="margin-top: 40px;">Shots / Σφηνάκια</h3>
-          <ul class="grid-list">
-            <li>
-              <div class="menu-card hover:card">
-                <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-1.png" width="100" height="100" loading="lazy" alt="Shot" class="img-cover">
+                  <img src="./assets/images/shpt.png" width="100" height="100" loading="lazy" alt="Shot" class="img-cover">
                 </figure>
                 <div>
                   <div class="title-wrapper">
@@ -1664,7 +1470,7 @@
             <li>
               <div class="menu-card hover:card">
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-2.png" width="100" height="100" loading="lazy" alt="Shot Premium" class="img-cover">
+                  <img src="./assets/images/premium.png" width="100" height="100" loading="lazy" alt="Shot Premium" class="img-cover">
                 </figure>
                 <div>
                   <div class="title-wrapper">
@@ -1678,14 +1484,132 @@
             <li>
               <div class="menu-card hover:card">
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-3.png" width="100" height="100" loading="lazy" alt="Shot special" class="img-cover">
+                  <img src="./assets/images/special.png" width="100" height="100" loading="lazy" alt="Shot Special" class="img-cover">
                 </figure>
                 <div>
                   <div class="title-wrapper">
-                    <h3 class="title-3"><a href="#" class="card-title">Shot special</a></h3>
+                    <h3 class="title-3"><a href="#" class="card-title">Shot Special</a></h3>
                     <span class="span title-2">€4.00</span>
                   </div>
-                  <p class="card-text label-1">Ask our staff about today's special shot.</p>
+                  <p class="card-text label-1">Ask for our today's special shot.</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+          <h3 class="headline-2 section-title text-center" style="margin-top: 40px;">Cold Beverages</h3>
+          <ul class="grid-list">
+            <li>
+              <div class="menu-card hover:card">
+                <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                  <img src="./assets/images/juice.png" width="100" height="100" loading="lazy" alt="Juice" class="img-cover">
+                </figure>
+                <div>
+                  <div class="title-wrapper">
+                    <h3 class="title-3"><a href="#" class="card-title">Juice</a></h3>
+                    <span class="span title-2">€2.50</span>
+                  </div>
+                  <p class="card-text label-1">A selection of refreshing fruit juices. Cranberry, Pineapple, Orange, Grapefruit.</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="menu-card hover:card">
+                <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                  <img src="./assets/images/soft.png" width="100" height="100" loading="lazy" alt="Sodas" class="img-cover">
+                </figure>
+                <div>
+                  <div class="title-wrapper">
+                    <h3 class="title-3"><a href="#" class="card-title">Soft Drinks</a></h3>
+                    <span class="span title-2">€2.50</span>
+                  </div>
+                  <p class="card-text label-1">Choose from our range of classic soft drinks.</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="menu-card hover:card">
+                <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                  <img src="./assets/images/menu-xinon.png" width="100" height="100" loading="lazy" alt="Xino Nero" class="img-cover">
+                </figure>
+                <div>
+                  <div class="title-wrapper">
+                    <h3 class="title-3"><a href="#" class="card-title">Xino Nero</a></h3>
+                    <span class="span title-2">€3.00</span>
+                  </div>
+                  <p class="card-text label-1">Natural sparkling mineral water from Florina.</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="menu-card hover:card">
+                <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                  <img src="./assets/images/seli.png" width="100" height="100" loading="lazy" alt="Water 50cl" class="img-cover">
+                </figure>
+                <div>
+                  <div class="title-wrapper">
+                    <h3 class="title-3"><a href="#" class="card-title">Water 50cl</a></h3>
+                    <span class="span title-2">€0.50</span>
+                  </div>
+                  <p class="card-text label-1">A bottle of still mineral water.</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <h3 class="headline-2 section-title text-center" style="margin-top: 40px;">Coffee & Tea</h3>
+          <ul class="grid-list">
+            <li>
+              <div class="menu-card hover:card">
+                <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                  <img src="./assets/images/coffee.png" width="100" height="100" loading="lazy" alt="Coffee" class="img-cover">
+                </figure>
+                <div>
+                  <div class="title-wrapper">
+                    <h3 class="title-3"><a href="#" class="card-title">Coffee</a></h3>
+                    <span class="span title-2">€2.50</span>
+                  </div>
+                  <p class="card-text label-1">Perfectly brewed coffee, served just the way you like it. Double shot for €3.00</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="menu-card hover:card">
+                <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                  <img src="./assets/images/frappe.png" width="100" height="100" loading="lazy" alt="Frappé" class="img-cover">
+                </figure>
+                <div>
+                  <div class="title-wrapper">
+                    <h3 class="title-3"><a href="#" class="card-title">Frappé</a></h3>
+                    <span class="span title-2">€2.50</span>
+                  </div>
+                  <p class="card-text label-1">Chilled, frothy instant coffee shaken with water and a touch of sugar; served over ice with optional milk.</p>
+                </div>
+              </div>
+            </li>
+               <li>
+              <div class="menu-card hover:card">
+                <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                  <img src="./assets/images/nescafe.png" width="100" height="100" loading="lazy" alt="Nescafé" class="img-cover">
+                </figure>
+                <div>
+                  <div class="title-wrapper">
+                    <h3 class="title-3"><a href="#" class="card-title">Nescafé</a></h3>
+                    <span class="span title-2">€3.00</span>
+                  </div>
+                  <p class="card-text label-1">Classic instant coffee made with Nescafé blend. Served hot or with cold milk.</p>
+                </div>
+              </div>
+            </li><li>
+              <div class="menu-card hover:card">
+                <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                  <img src="./assets/images/tea.png" width="100" height="100" loading="lazy" alt="Mountain Tea" class="img-cover">
+                </figure>
+                <div>
+                  <div class="title-wrapper">
+                    <h3 class="title-3"><a href="#" class="card-title">Mountain Tea</a></h3>
+                    <span class="span title-2">€3.00</span>
+                  </div>
+                  <p class="card-text label-1">Traditional mountain tea with floral, herbal notes and gentle sweetness.</p>
                 </div>
               </div>
             </li>
@@ -2047,7 +1971,7 @@
           <div class="separator"></div><div class="separator"></div><div class="separator"></div>
         </div>
         <div class="profile">
-          <img src="./assets/images/testi-avatar13.jpg" width="100" height="100" loading="lazy" alt="Γιώργος Δ" class="img">
+          <img src="./assets/images/testi-avatar13.jpg" width="100" height="100" loading="lazy" alt="ΓΙΩΡΓΟΣ Δ" class="img">
           <p class="label-2 profile-name">Γιώργος Δ</p>
         </div>
       </div>		  
@@ -2372,7 +2296,7 @@
       <div class="footer-bottom">
 
         <p class="copyright">
-          &copy; 2025 Mpriki. All Rights Reserved | Crafted by KWS
+          &copy; 2025 Mpriki | Crafted by KWS
             </a>
         </p>
 
