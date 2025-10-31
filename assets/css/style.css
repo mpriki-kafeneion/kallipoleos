@@ -1565,7 +1565,7 @@ textarea.input-field {
 
 
 
-  /**
+/**
    * MENU
    */
 
@@ -1575,6 +1575,20 @@ textarea.input-field {
     align-items: center;
     gap: 15px;
   }
+  
+  /* --- FIX 1: Title Container (h3) Management --- */
+  .menu-card .title-3 {
+    flex-grow: 0;      /* DO NOT take extra space */
+    flex-shrink: 0;    /* DO NOT shrink below content width */
+    white-space: normal; /* Allow text to wrap if it's still too long */
+  }
+  
+  /* --- FIX 2: Anchor Link Text Management (to prevent clipping) --- */
+  .menu-card .card-title {
+    white-space: normal; /* Crucial for long titles like 'Kronenbourg 1664 Blanc' */
+  }
+
+  /* --- EXISTING STYLES BELOW (No Change Needed) --- */
 
   .menu-card .badge { margin-block-start: 0; }
 
@@ -1592,8 +1606,6 @@ textarea.input-field {
     flex-grow: 1;
     border-block: 1px solid var(--white-alpha-20);
   }
-
-
 
   /**
    * EVENT
@@ -2241,6 +2253,39 @@ textarea.input-field {
   color: var(--gold-crayola);
 }
 
+/* FINAL single-paste fix — place LAST in style.css */
+
+/* 1) Right column (content area) must be the flexible column */
+.menu-card > div {
+  flex: 1 1 auto !important;
+  min-width: 0 !important;
+  box-sizing: border-box !important;
+}
+
+/* hide .testes only on desktop (>= 1024px) */
+@media (min-width: 1024px) {
+  .testes {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    overflow: hidden !important;
+    pointer-events: none !important;
+  }
+}
+
+/* hide only the footer-brand block on desktop >=1024px */
+@media (min-width:1024px) {
+  .footer-brand {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+    pointer-events: none !important;
+  }
+}
+
   /**
    * FEATURES
    */
@@ -2260,3 +2305,4 @@ textarea.input-field {
   }
 
 }
+
