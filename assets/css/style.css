@@ -2315,3 +2315,30 @@ textarea.input-field {
         background-image: none !important;
     }
 }
+
+/*
+  CRITICAL FIX: Overrides flex sizing and forces the menu image container 
+  to the intended 100x100px size, allowing the high-res image to scale down.
+*/
+
+/* 1. Force the image holder to be exactly 100x100px and stop it from expanding the menu card. */
+.menu-card .card-banner.img-holder {
+    width: 100px !important; 
+    height: 100px !important;
+    
+    /* Critical for a flex container: tells it not to grow or shrink */
+    flex: 0 0 auto !important; 
+    
+    /* Ensure the container is displayed correctly */
+    display: block !important; 
+    
+    /* Make sure the high-res image is contained */
+    overflow: hidden !important; 
+}
+
+/* 2. Ensure the high-res image fills the newly constrained 100x100 container. */
+.menu-card .card-banner.img-holder .img-cover {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+}
