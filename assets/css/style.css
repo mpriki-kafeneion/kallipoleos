@@ -2306,3 +2306,12 @@ textarea.input-field {
 
 }
 
+/*
+  Hide the img-pattern.svg ONLY in the About section on mobile devices
+  The pattern is on the ::before pseudo-element of .abs-img-1.
+*/
+@media (max-width: 575px) {
+    .about .abs-img-1::before {
+        background-image: none !important;
+    }
+}
