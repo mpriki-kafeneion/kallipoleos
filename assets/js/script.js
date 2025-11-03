@@ -4,8 +4,7 @@
 
 /**
  * PRELOAD
- * 
- * loading will be end after document is loaded
+ * * loading will be end after document is loaded
  */
 
 const preloader = document.querySelector("[data-preaload]");
@@ -44,6 +43,23 @@ const toggleNavbar = function () {
 }
 
 addEventOnElements(navTogglers, "click", toggleNavbar);
+
+
+
+/**
+ * CLOSE MOBILE MENU ON LINK CLICK (THE FIX)
+ */
+
+const navLinks = document.querySelectorAll(".navbar-link");
+
+const closeMenuOnLinkClick = function () {
+  // Check if the mobile menu is open before closing it
+  if (navbar.classList.contains("active")) {
+    toggleNavbar(); // Reuse the existing toggle function to close
+  }
+}
+
+addEventOnElements(navLinks, "click", closeMenuOnLinkClick);
 
 
 
