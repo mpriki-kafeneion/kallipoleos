@@ -2401,16 +2401,16 @@
   // Create snowflakes
 const snowContainer = document.querySelector('.snow');
 
-  for (let i = 0; i < 15; i++) { // reduced from 80 to 15
-    const snowflake = document.createElement('div');
-    snowflake.className = 'snowflake';
-    snowflake.style.left = Math.random() * 100 + 'vw';
-    snowflake.style.animationDuration = 15 + Math.random() * 10 + 's'; // slower fall
-    snowflake.style.animationDelay = -Math.random() * 20 + 's';
-    snowflake.style.opacity = 0.2 + Math.random() * 0.1; // faint flakes
-    snowflake.style.fontSize = 4 + Math.random() * 2 + 'px'; // small flakes
-    snowflake.innerHTML = '❄';
-    snowContainer.appendChild(snowflake);
+for (let i = 0; i < 30; i++) {  // more flakes
+  const snowflake = document.createElement('div');
+  snowflake.className = 'snowflake';
+  snowflake.style.left = Math.random() * 100 + 'vw';
+  snowflake.style.animationDuration = 15 + Math.random() * 10 + 's';
+  snowflake.style.animationDelay = -Math.random() * 20 + 's';
+  snowflake.style.opacity = 0.2 + Math.random() * 0.15;
+  snowflake.style.fontSize = 8 + Math.random() * 14 + 'px'; // small to big
+  snowflake.innerHTML = '❄';
+  snowContainer.appendChild(snowflake);
   }
 </script>
 		
