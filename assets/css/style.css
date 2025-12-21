@@ -2351,7 +2351,7 @@ textarea.input-field {
   height: 100%;
   pointer-events: none;
   overflow: hidden;
-  z-index: 9999;
+  z-index: -1; /* snow behind all text */
 }
 
 .snowflake {
@@ -2359,11 +2359,10 @@ textarea.input-field {
   top: -10%;
   color: white;
 
-  /* ↓↓↓ MAKE IT LESS DENSE ↓↓↓ */
-  font-size: 6px;            /* smaller flakes */
-  opacity: 0.3;              /* more transparent */
-  animation-duration: 15s;   /* slower fall = fewer flakes visible */
-  /* ↑↑↑ THAT'S ALL YOU NEED ↑↑↑ */
+  /* LIGHT + SUBTLE */
+  font-size: 4px;
+  opacity: 0.15;
+  animation-duration: 18s;
 
   animation-name: fall;
   animation-timing-function: linear;
