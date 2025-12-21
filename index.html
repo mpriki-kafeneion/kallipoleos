@@ -2399,16 +2399,16 @@
 
 <script>
   // Create snowflakes
-  const snowContainer = document.querySelector('.snow');
+const snowContainer = document.querySelector('.snow');
 
-  for (let i = 0; i < 80; i++) {
+  for (let i = 0; i < 15; i++) { // reduced from 80 to 15
     const snowflake = document.createElement('div');
     snowflake.className = 'snowflake';
     snowflake.style.left = Math.random() * 100 + 'vw';
-    snowflake.style.animationDuration = 5 + Math.random() * 5 + 's';
-    snowflake.style.animationDelay = -Math.random() * 10 + 's';
-    snowflake.style.opacity = Math.random();
-    snowflake.style.fontSize = 10 + Math.random() * 10 + 'px';
+    snowflake.style.animationDuration = 15 + Math.random() * 10 + 's'; // slower fall
+    snowflake.style.animationDelay = -Math.random() * 20 + 's';
+    snowflake.style.opacity = 0.2 + Math.random() * 0.1; // faint flakes
+    snowflake.style.fontSize = 4 + Math.random() * 2 + 'px'; // small flakes
     snowflake.innerHTML = '❄';
     snowContainer.appendChild(snowflake);
   }
