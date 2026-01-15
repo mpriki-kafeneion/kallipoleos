@@ -2342,7 +2342,7 @@ textarea.input-field {
     height: 100% !important;
     object-fit: cover !important;
 }
-
+/*
 .snow {
   position: fixed;
   top: 0;
@@ -2352,16 +2352,16 @@ textarea.input-field {
   pointer-events: none;
   overflow: hidden;
   z-index: -1; /* behind all content */
-}
-
+/* }
+/*
 .snowflake {
   position: absolute;
   top: -10%;
   color: rgba(255, 255, 255, 0.2); /* 80% transparent white */
-  font-size: 5px;                  /* small flakes */
-  animation: fall 20s linear infinite;
+/*  font-size: 5px;                  /* small flakes */
+/*  animation: fall 20s linear infinite;
 }
-
+/*
 .snowflake:nth-child(1)  { left: 10%; animation-delay: 0s; }
 .snowflake:nth-child(2)  { left: 25%; animation-delay: 2s; }
 .snowflake:nth-child(3)  { left: 40%; animation-delay: 4s; }
@@ -2369,7 +2369,7 @@ textarea.input-field {
 .snowflake:nth-child(5)  { left: 75%; animation-delay: 3s; }
 .snowflake:nth-child(6)  { left: 90%; animation-delay: 5s; }
 
-@keyframes fall {
+/* @keyframes fall {
   0%   { transform: translateY(0); }
   100% { transform: translateY(110vh); }
-}
+} */
